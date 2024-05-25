@@ -5,9 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 
 <body>
+
+
+  <div class="container">
+    <h2>Trouver le bon mot</h2>
+
+    <div class="content">
+      <div class="chrono">
+        <div class="chrono-header">Chrono</div>
+        <div class="chrono-img"><ion-icon name="stopwatch-outline"></ion-icon></div>
+        <div class="chrono-content">20</div>
+      </div>
+      <p class="mot">Javascript</p>
+      <div class="infos">
+        <p class="indice"><span class="indice-label">Indice:</span> <span class="indice-content">Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Debitis aperiam perferendis quaerat ab odit eligendi.</span></p>
+      </div>
+
+      <input type="text" placeholder="Indiquez votre réponse">
+    </div>
+
+
+    <div class="buttons">
+      <button class="refresh">Recommencer</button>
+      <button class="valide">Valider</button>
+    </div>
+
+    <div class="score"></div>
+  </div>
+
+
+
 
 </body>
 
