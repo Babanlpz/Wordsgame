@@ -83,6 +83,16 @@ const displayScore = () => {
   labelContainer.style.display = "none";
   scoreDisplay.innerText = `Ton score: ${score} / ${mots.length}`;
   scoreDisplay.style.display = "block";
+
+  if (score == 0 && score < 10) {
+    scoreDisplay.innerText = `Oh non, ton score est de: ${score} / ${mots.length}`;
+  } else if (score >= 10 && score <= 18) {
+    scoreDisplay.innerText = `Dommage, ton score est de: ${score} / ${mots.length}`;
+  } else if (score == 19) {
+    scoreDisplay.innerText = `Aie, ton score est de: ${score} / ${mots.length}`;
+  } else if (score == 20) {
+    scoreDisplay.innerText = `Bravo, ton score est de: ${score} / ${mots.length}`;
+  }
 };
 
 btnValide.addEventListener("click", checkGame);
