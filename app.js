@@ -85,4 +85,7 @@ const displayScore = () => {
   scoreDisplay.style.display = "block";
 };
 
+btnValide.addEventListener("click", checkGame);
+btnRefresh.addEventListener("click", initGame);
+
 initGame();
