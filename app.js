@@ -39,8 +39,8 @@ const initGame = () => {
   let randomObj = mots[questionIndex];
   let motTableau = randomObj.mot.split("");
 
-  for (let i = motTableau.length - 1; i > 0; i++) {
-    const j = Math.floor(Math.random() * (i + 1));
+  for (let i = motTableau.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
     [motTableau[i], motTableau[j]] = [motTableau[j], motTableau[i]];
   }
 
