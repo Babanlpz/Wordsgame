@@ -54,4 +54,35 @@ const initGame = () => {
   input.setAttribute("maxLength", motCorrect.length);
 };
 
+const checkGame = () => {
+  let userMot = input.value.toLowerCase();
+
+  if (userMot === motCorrect) {
+    score++;
+  }
+
+  questionIndex++;
+
+  if (questionIndex < mots.length) {
+    initGame();
+  } else {
+    displayScore();
+  }
+};
+
+const chronoContainer = document.querySelector(".chrono");
+const labelContainer = document.querySelector(".indice-label");
+
+const displayScore = () => {
+  motText.innerText = "FIN DU JEU!";
+  indiceText.innerText = "Voici votre score";
+  input.style.display = "none";
+  btnValide.style.display = "none";
+  btnRefresh.style.display = "none";
+  chronoContainer.style.display = "none";
+  labelContainer.style.display = "none";
+  scoreDisplay.innerText = `Ton score: ${score} / ${mots.length}`;
+  scoreDisplay.style.display = "block";
+};
+
 initGame();
